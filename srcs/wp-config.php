@@ -1,5 +1,5 @@
 <?php
- /**
+/**
  * The base configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the
@@ -13,7 +13,7 @@
  * * Database table prefix
  * * ABSPATH
  *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
  *
  * @package WordPress
  */
@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'wordpress' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'user_wp' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'password' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -46,14 +46,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define('AUTH_KEY',         'Y?6Ox3i1=&*4&*aAx0CQ>75q0S+8;P4&mzt+U?f8:j,faq)&&/0r]hpMt_J-AukG');
+define('SECURE_AUTH_KEY',  '3~Mi5*y$w5|=6egNRZ*5}GSS?oz3ePxO~nbKkb^]lwK1_Q1C_Fjd+Odr0PFy-xj.');
+define('LOGGED_IN_KEY',    '5w}!_Es3{|G]f1@z2Y:pZ@@9+Fn3tV]$+2A7||HY21.&G#{Xl:)U?rwF/}Z+9wiV');
+define('NONCE_KEY',        'ZqG|;b2P>ew=S5==e 5]=YPSrZ77?8)`_dRg3y&?_c-%3D1D)bMVxu#k7hGk}+S`');
+define('AUTH_SALT',        '{T/-S>qNwUXF$N#J1aAJzG.eq++py@8pJVK!+lyXscCqb0nOV:0a!1%!znHY-*h|');
+define('SECURE_AUTH_SALT', '@QD):&-q*l)ijZpyj~Qhy#hvjU-S|1dL/P<Mjp5nB;[FK1m0paPzmlga<nSf$l%T');
+define('LOGGED_IN_SALT',   '-%Id%I4UM6S7k2)whja}bLKn;p}Rwm9TE/DRNQLLLV]i0zB3@(j%FqOf_`^7}.%)');
+define('NONCE_SALT',       'wSiN2n9u1{>7m^l4HBeLJtYCJ<@i,f5]iaU*{X1f$!w+S%.>s)m#h!E[s2MA}Nbm');
 
 /**#@-*/
 
@@ -73,9 +73,9 @@ $table_prefix = 'wp_';
  * in their development environments.
  *
  * For information on other constants that can be used for debugging,
- * visit the Codex.
+ * visit the documentation.
  *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
 
@@ -83,8 +83,8 @@ define( 'WP_DEBUG', false );
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+	define( 'ABSPATH', __DIR__ . '/' );
 }
 
 /** Sets up WordPress vars and included files. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once ABSPATH . 'wp-settings.php';
