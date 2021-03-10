@@ -10,6 +10,7 @@ then
 	echo "index ON"
 	cp default /etc/nginx/sites-enabled/localhost
 	rm -r /var/www/localhost/index.html
+	cp ./index.html /var/www/localhost/index.html
 fi
 
 service nginx reload

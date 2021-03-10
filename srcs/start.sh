@@ -12,6 +12,7 @@ openssl req -newkey rsa:4096 \
 #NGINX
 mkdir var/www/localhost
 cp ./default etc/nginx/sites-available
+cp ./index.html /var/www/localhost/index.html
 ln -s etc/nginx/sites-available/default etc/nginx/sites-enabled
 chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
