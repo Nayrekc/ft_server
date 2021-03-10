@@ -19,9 +19,9 @@ chmod -R 755 /var/www/*
 #MYSQL
 service mysql start
 echo "CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -u root
-echo "GRANT ALL ON wordpress.* TO 'user_wp'@'localhost' IDENTIFIED BY 'password';" | mysql -u root
+echo "GRANT ALL ON wordpress.* TO 'userwp'@'localhost' IDENTIFIED BY 'password';" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
-echo "update mysql.user set plugin='mysql_native_password' where user='user_wp';" | mysql -u root
+echo "update mysql.user set plugin='mysql_native_password' where user='userwp';" | mysql -u root
 
 #PHPMYADMIN
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
