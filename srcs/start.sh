@@ -12,7 +12,6 @@ openssl req -newkey rsa:4096 \
 #NGINX
 mkdir var/www/localhost
 cp ./default etc/nginx/sites-available
-ln -s etc/nginx/sites-available/default etc/nginx/sites-enabled
 chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
 
@@ -41,6 +40,4 @@ mv ./wp-config.php /var/www/localhost/wordpress
 
 #LANCEMENT
 service nginx start
-service mysql restart
-service php7.3-fpm restart
 sleep infinity
