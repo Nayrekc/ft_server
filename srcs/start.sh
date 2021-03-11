@@ -12,7 +12,6 @@ openssl req -newkey rsa:4096 \
 #NGINX
 mkdir var/www/localhost
 cp ./default etc/nginx/sites-available
-cp ./index.html /var/www/localhost/index.html
 ln -s etc/nginx/sites-available/default etc/nginx/sites-enabled
 chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
@@ -32,8 +31,6 @@ mv ./config.inc.php var/www/localhost/phpmyadmin
 chmod 660 /var/www/localhost/phpmyadmin/config.inc.php
 chown -R www-data:www-data /var/www/localhost/phpmyadmin
 service php7.3-fpm start
-echo "GRANT ALL ON *.* TO 'ketaouki'@'localhost' IDENTIFIED BY '123'" | mysql -u root
-echo "FLUSH PRIVILEGES;" | mysql -u root
 
 #WORDPRESS
 wget https://wordpress.org/latest.tar.gz
